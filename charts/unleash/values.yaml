@@ -176,7 +176,7 @@ nodeSelector: {}
 podAnnotations: {}
 
 readinessProbe:
-  enabled: true
+  enabled: false
   path: /
   initialDelaySeconds: 30
   timeoutSeconds: 10
