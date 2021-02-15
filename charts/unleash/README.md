@@ -60,3 +60,4 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 ## Configuration
 
 See description of configuration in the values.yaml
+
