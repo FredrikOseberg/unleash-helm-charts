@@ -15,7 +15,7 @@ affinity: {}
   #         topologyKey: failure-domain.beta.kubernetes.io/zone
   #       weight: 100
 
-# horizontal pod autoscaler
+# HorizontalPodAutoscaler
 # https://kubernetes.io/de/docs/tasks/run-application/horizontal-pod-autoscale/
 autoscaling:
   enabled: false
@@ -165,7 +165,7 @@ ingress:
 
 livenessProbe:
   enabled: true
-  path: /status
+  path: /
   initialDelaySeconds: 30
   timeoutSeconds: 10
 
@@ -174,11 +174,10 @@ nameOverride: ""
 nodeSelector: {}
 
 podAnnotations: {}
-# if postgres dependency chart is used, this needs to be the same value as postgresql.postgresqlPassword
 
 readinessProbe:
   enabled: true
-  path: /status
+  path: /
   initialDelaySeconds: 30
   timeoutSeconds: 10
   periodSeconds: 10
