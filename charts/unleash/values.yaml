@@ -164,7 +164,7 @@ ingress:
 #        - unleash.example.com
 
 livenessProbe:
-  enabled: false
+  enabled: true
   path: /status
   initialDelaySeconds: 30
   timeoutSeconds: 10
@@ -177,12 +177,12 @@ podAnnotations: {}
 # if postgres dependency chart is used, this needs to be the same value as postgresql.postgresqlPassword
 
 readinessProbe:
-  enabled: false
-#  path: /status
-#  initialDelaySeconds: 30
-#  timeoutSeconds: 10
-#  periodSeconds: 10
-#  successThreshold: 5
+  enabled: true
+  path: /status
+  initialDelaySeconds: 30
+  timeoutSeconds: 10
+  periodSeconds: 10
+  successThreshold: 5
 
 replicaCount: 1
 

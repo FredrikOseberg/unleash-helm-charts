@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# use kubeval to validate helm generated kubernetes manifest
+# use kubeval to validate helm generated kubernetes manifests
 #
 
 set -o errexit
