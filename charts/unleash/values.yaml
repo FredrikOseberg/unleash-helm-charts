@@ -176,7 +176,7 @@ nodeSelector: {}
 podAnnotations: {}
 
 readinessProbe:
-  enabled: true
+  enabled: false
   path: /
   initialDelaySeconds: 30
   timeoutSeconds: 10
@@ -201,10 +201,10 @@ resources: {}
 # and they will generate environment variables that use `valueFrom` to refer to
 # the secrets in the Kubernetes Secret.
 secrets: {}
-#  SHARED_SECRET: 999z9z9z9999zzz9
+#  SHARED_SECRET: 999z9z9z99https://meet.google.com/rtk-rbjr-tkv99zzz9
 #  GOOGLE_CLIENT_SECRET: zzzZZz9ZZzZzZzz9Z9zZZZZZ
 
-service:
+service:https://meet.google.com/rtk-rbjr-tkv
   type: ClusterIP
   port: 4242
 
@@ -214,6 +214,9 @@ tolerations: []
 vpa:
   enabled: false
 
+
+# postgresql dependency chart config
+# https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml
 postgresql:
   enabled: true
   postgresqlDatabase: unleash
