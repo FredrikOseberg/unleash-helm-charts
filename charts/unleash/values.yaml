@@ -164,7 +164,7 @@ ingress:
 #        - unleash.example.com
 
 livenessProbe:
-  enabled: true
+  enabled: false
   path: /
   initialDelaySeconds: 30
   timeoutSeconds: 10
@@ -176,7 +176,7 @@ nodeSelector: {}
 podAnnotations: {}
 
 readinessProbe:
-  enabled: false
+  enabled: true
   path: /
   initialDelaySeconds: 30
   timeoutSeconds: 10
