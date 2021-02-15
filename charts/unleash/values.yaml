@@ -112,7 +112,7 @@ configMaps: {}
 
 containerPort: 4242
 
-dbConfig: 
+dbConfig:
   # if postgres dependency chart is used, this needs to be the same value as postgresql.postgresqlDatabase
   database: unleash
   host: unleash-postgresql
@@ -202,8 +202,8 @@ resources: {}
 # and they will generate environment variables that use `valueFrom` to refer to
 # the secrets in the Kubernetes Secret.
 secrets: {}
-#  SHARED_SECRET: 999z9z9z9999zzz9 
-#  GOOGLE_CLIENT_SECRET: zzzZZz9ZZzZzZzz9Z9zZZZZZ 
+#  SHARED_SECRET: 999z9z9z9999zzz9
+#  GOOGLE_CLIENT_SECRET: zzzZZz9ZZzZzZzz9Z9zZZZZZ
 
 service:
   type: ClusterIP
@@ -221,4 +221,3 @@ postgresql:
   postgresqlUsername: unleash
   # this should be changed to something more secure
   postgresqlPassword: unleash
-  
