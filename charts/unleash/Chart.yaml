@@ -7,7 +7,7 @@ dependencies:
   condition: postgresql.enabled
 description: Unleash is a open source feature flag & toggle system, that gives you a great overview over all feature toggles across all your applications and services.
 name: unleash
-sources: 
+sources:
   - https://github.com/Unleash/unleash
   - https://github.com/Unleash/unleash-docker
   - https://github.com/Unleash/helm-charts
