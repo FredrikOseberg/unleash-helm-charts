@@ -12,4 +12,4 @@ sources:
   - https://github.com/Unleash/unleash-docker
   - https://github.com/Unleash/helm-charts
 type: application
-version: 0.1.0
+version: 1.0.0
