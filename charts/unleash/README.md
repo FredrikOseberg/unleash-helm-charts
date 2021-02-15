@@ -1,6 +1,6 @@
 # Unleash
 
-Unleash is a open source feature flag & toggle system, that gives you a great overview over all feature toggles across all your applications and services. 
+Unleash is a open source feature flag & toggle system, that gives you a great overview over all feature toggles across all your applications and services.
 It comes with official client implementations for Java, Node.js, Go, Ruby, Python and .NET Core.
 
 This chart bootstraps a [Unleash](https://github.com/Unleash/unleash) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
@@ -60,4 +60,3 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 ## Configuration
 
 See description of configuration in the values.yaml
-
