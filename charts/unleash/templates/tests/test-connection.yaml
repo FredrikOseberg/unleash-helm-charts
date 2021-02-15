@@ -5,7 +5,8 @@ metadata:
   labels:
     {{- include "unleash.labels" . | nindent 4 }}
   annotations:
-    "helm.sh/hook": test-success
+    helm.sh/hook: test
+    helm.sh/hook: post-install
 spec:
   containers:
     - name: wget
