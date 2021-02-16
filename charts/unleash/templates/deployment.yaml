@@ -59,12 +59,8 @@ spec:
               protocol: TCP
           livenessProbe:
             {{- tpl . $ | nindent 12 }}
-          {{- end }}
-          {{- if .Values.readinessProbe.enabled }}
           readinessProbe:
             {{- tpl . $ | nindent 12 }}
-          {{- end }}
-          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- if .Values.configMaps }}
