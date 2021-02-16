@@ -16,4 +16,6 @@ spec:
       args: 
         - curl --head --silent --show-error --retry-all-errors --retry 120 --retry-delay 1 {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
   restartPolicy: Never
+
   # curl --head --silent --show-error --retry-all-errors --retry 10 --retry-delay 3 {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
+
