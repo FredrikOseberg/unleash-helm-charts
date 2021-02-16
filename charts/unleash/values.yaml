@@ -163,9 +163,10 @@ ingress:
 #      hosts:
 #        - unleash.example.com
 
-livenessProbe:
-  enabled: false
-  path: /
+livenessProbe: |
+  httpGet:
+    path: /
+    port: http
   initialDelaySeconds: 30
   timeoutSeconds: 10
 
@@ -175,9 +176,10 @@ nodeSelector: {}
 
 podAnnotations: {}
 
-readinessProbe:
-  enabled: false
-  path: /
+readinessProbe: |
+  httpGet:
+    path: /
+    port: http
   initialDelaySeconds: 30
   timeoutSeconds: 10
   periodSeconds: 10
