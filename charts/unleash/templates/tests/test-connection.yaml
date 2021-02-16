@@ -10,6 +10,9 @@ spec:
   containers:
     - name: curl
       image: curlimages/curl
-      args:
-        - "--silent --show-error --fail --location --retry-all-errors --retry 10 --retry-delay 3 {{ include "unleash.fullname" . }}:{{ .Values.service.port }}"
+      command: 
+        - sh
+        - -c
+      args: 
+        - curl --head --silent --show-error --fail --location --retry-all-errors --retry 10 --retry-delay 3 {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
   restartPolicy: Never
