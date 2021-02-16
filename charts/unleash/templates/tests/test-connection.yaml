@@ -8,12 +8,12 @@ metadata:
     "helm.sh/hook": test
 spec:
   containers:
-    - name: curl
-      image: curlimages/curl
+    - name: test
+      image: busybox
       command: 
         - sh
         - -c
       args: 
-        #- sleep 60
+        - sleep 60
         - wget {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
   restartPolicy: Never
