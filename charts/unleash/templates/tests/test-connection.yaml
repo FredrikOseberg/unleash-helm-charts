@@ -12,7 +12,7 @@ spec:
       image: curlimages/curl
       command: 
         - sh
-        - -c
+        - -xc
       args: 
         - sleep 10
         - curl {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
