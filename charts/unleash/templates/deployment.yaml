@@ -35,7 +35,7 @@ spec:
                   name: {{ if .Values.dbConfig.useExistingSecret.name }}{{ .Values.dbConfig.useExistingSecret.name }}{{ else }}{{ include "unleash.fullname" . }}-postgresql{{ end }}
                   key: {{ if .Values.dbConfig.useExistingSecret.key }}{{ .Values.dbConfig.useExistingSecret.key }}{{ else }}postgresql-password{{ end }}
             - name: DATABASE_URL
-              value: postgres://{{ .Values.dbConfig.user }}:$(POSTGRESQL_PASSWORD)@{{ if .Values.postgresql.enabled }}unleash-postgres{{ else }}{{ .Values.dbConfig.host }}{{ end }}:{{ .Values.dbConfig.port }}/{{ .Values.dbConfig.database }}
+              value: postgres://{{ .Values.dbConfig.user }}:$(POSTGRESQL_PASSWORD)@{{ if .Values.postgresql.enabled }}unleash-postgresql{{ else }}{{ .Values.dbConfig.host }}{{ end }}:{{ .Values.dbConfig.port }}/{{ .Values.dbConfig.database }}
             {{- if .Values.env }}
             {{- toYaml .Values.env | nindent 12 }}
             {{- end }}
