@@ -9,11 +9,8 @@ metadata:
     "helm.sh/hook-delete-policy": hook-succeeded
 spec:
   containers:
-    - name: test
-      image: curlimages/curl
-      command: 
-        - sh
-        - -exc
-      args: 
-        - curl --head --silent --show-error --retry-all-errors --retry 10 --retry-delay 1 {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "unleash.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never
