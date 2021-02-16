@@ -165,7 +165,6 @@ ingress:
 
 livenessProbe: |
   httpGet:
-    path: /
     port: http
   initialDelaySeconds: 30
   timeoutSeconds: 10
@@ -178,11 +177,9 @@ podAnnotations: {}
 
 readinessProbe: |
   httpGet:
-    path: /
     port: http
   initialDelaySeconds: 30
   timeoutSeconds: 10
-  periodSeconds: 10
   successThreshold: 5
 
 replicaCount: 1
