@@ -204,7 +204,7 @@ secrets: {}
 #  SHARED_SECRET: 999z9z9z99https://meet.google.com/rtk-rbjr-tkv99zzz9
 #  GOOGLE_CLIENT_SECRET: zzzZZz9ZZzZzZzz9Z9zZZZZZ
 
-service:https://meet.google.com/rtk-rbjr-tkv
+service:
   type: ClusterIP
   port: 4242
 
