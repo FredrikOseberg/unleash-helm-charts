@@ -115,7 +115,7 @@ containerPort: 4242
 dbConfig:
   # if postgres dependency chart is used, this needs to be the same value as postgresql.postgresqlDatabase
   database: unleash
-  host: unleash-postgresql
+  host: unleash-postgres
   # if postgres dependency chart is used, this needs to be the same value as postgresql.postgresqlPassword
   # this should be change to something more secure or use an existing secret
   pass: unleash
@@ -124,7 +124,7 @@ dbConfig:
     name: ""
     key: ""
   # if postgres dependency chart is used, this needs to be the same value as postgresql.postgresqlUsername
-  user: postgres
+  user: unleash
 
 env: []
 #  - name: GOOGLE_CLIENT_ID
@@ -217,7 +217,8 @@ vpa:
 # https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml
 postgresql:
   enabled: true
+  fullnameOverride: "unleash-postgres"
   postgresqlDatabase: unleash
-  #postgresqlUsername: unleash
+  postgresqlUsername: unleash
   # this should be change to something more secure or use an existing secret
   postgresqlPassword: unleash
