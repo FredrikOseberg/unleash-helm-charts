@@ -208,6 +208,9 @@ service:
   type: ClusterIP
   port: 4242
 
+test:
+  enabled: false
+
 tolerations: []
 
 # VerticalPodAutoscaler
