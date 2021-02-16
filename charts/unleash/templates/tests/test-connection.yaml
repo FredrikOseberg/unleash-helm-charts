@@ -1,3 +1,4 @@
+{{- if .Values.test.enabled }}
 apiVersion: v1
 kind: Pod
 metadata:
@@ -14,5 +15,6 @@ spec:
         - sh
         - -exc
       args: 
-        - sleep 10;curl --head --silent --show-error --retry-all-errors --retry 120 --retry-delay 1 {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
+        - curl --head --silent --show-error --retry-all-errors --retry 120 --retry-delay 1 {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
   restartPolicy: Never
+{{- end }}
