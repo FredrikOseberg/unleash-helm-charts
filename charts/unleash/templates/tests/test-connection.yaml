@@ -10,6 +10,8 @@ spec:
   containers:
     - name: wget
       image: busybox
-      command: ['wget']
-      args: ['{{ include "unleash.fullname" . }}:{{ .Values.service.port }}']
+      command: ["/bin/sh", "-c"]] 
+      args:
+        - "sleep 60"
+        - "wget {{ include "unleash.fullname" . }}:{{ .Values.service.port }}"
   restartPolicy: Never
