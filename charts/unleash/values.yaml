@@ -115,7 +115,7 @@ containerPort: 4242
 dbConfig:
   # if postgres dependency chart is used, this needs to be the same value as postgresql.postgresqlDatabase
   database: unleash
-  host: unleash-postgres
+  host: postgres
   # if postgres dependency chart is used, this needs to be the same value as postgresql.postgresqlPassword
   # this should be change to something more secure or use an existing secret
   pass: unleash
@@ -163,9 +163,9 @@ ingress:
 #      hosts:
 #        - unleash.example.com
 
-livenessProbe: |
-  httpGet:
-    port: http
+livenessProbe:
+  enabled: true
+  path: /status
   initialDelaySeconds: 30
   timeoutSeconds: 10
 
@@ -175,11 +175,12 @@ nodeSelector: {}
 
 podAnnotations: {}
 
-readinessProbe: |
-  httpGet:
-    port: http
+readinessProbe:
+  enabled: true
+  path: /status
   initialDelaySeconds: 30
   timeoutSeconds: 10
+  periodSeconds: 10
   successThreshold: 5
 
 replicaCount: 1
