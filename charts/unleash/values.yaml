@@ -217,6 +217,7 @@ vpa:
 # https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml
 postgresql:
   enabled: true
+  fullnameOverride: "unleash-postgres"
   postgresqlDatabase: unleash
   postgresqlUsername: unleash
   # this should be change to something more secure or use an existing secret
