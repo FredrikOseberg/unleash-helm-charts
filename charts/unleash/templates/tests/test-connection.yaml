@@ -14,6 +14,5 @@ spec:
         - sh
         - -exc
       args: 
-        - sleep 1
-        - wget {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
+        - sleep 10; wget {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
   restartPolicy: Never
