@@ -9,10 +9,10 @@ metadata:
 spec:
   containers:
     - name: test
-      image: busybox
+      image: curlimages/curl
       command: 
         - sh
         - -exc
       args: 
-        - sleep 10; wget {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
+        - sleep 10;curl --head --silent --show-error --retry-all-errors --retry 120 --retry-delay 1 {{ include "unleash.fullname" . }}:{{ .Values.service.port }}
   restartPolicy: Never
