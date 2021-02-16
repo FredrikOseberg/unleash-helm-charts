@@ -124,7 +124,7 @@ dbConfig:
     name: ""
     key: ""
   # if postgres dependency chart is used, this needs to be the same value as postgresql.postgresqlUsername
-  user: unleash
+  user: postgres
 
 env: []
 #  - name: GOOGLE_CLIENT_ID
@@ -218,6 +218,6 @@ vpa:
 postgresql:
   enabled: true
   postgresqlDatabase: unleash
-  postgresqlUsername: unleash
+  #postgresqlUsername: unleash
   # this should be change to something more secure or use an existing secret
   postgresqlPassword: unleash
