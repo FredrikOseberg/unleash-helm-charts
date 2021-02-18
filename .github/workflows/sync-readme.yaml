@@ -17,6 +17,8 @@ jobs:
           cp -f README.md ${{ runner.temp }}/README.md
 
       - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
 
       - run: |
           cp -f ${{ runner.temp }}/README.md .
